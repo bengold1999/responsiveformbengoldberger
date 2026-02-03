@@ -36,7 +36,6 @@
     --space-xl: 2rem;      /* 32px */
     --space-2xl: 2.5rem;   /* 40px */
     --space-3xl: 3rem;     /* 48px */
-    --space-4xl: 4rem;     /* 64px */
 
     /* Border Radius */
     --radius-sm: 4px;
@@ -185,7 +184,6 @@ body {
     color: var(--color-text);
     margin-top: var(--space-sm);
     text-align: right;
-    font-weight:var(--font-weight-normal);
 }
 
 .error-summary {
@@ -257,19 +255,6 @@ body {
     color: var(--color-text);
     padding-bottom: 0;
     line-height: 1;
-    opacity: 0;
-    transition: opacity var(--transition-fast);
-}
-
-/* Show label when input has value */
-.form-field.has-value .form-label {
-    opacity: 1;
-}
-
-/* Always show label for select fields */
-.form-field--select .form-label,
-.form-field:has(.form-select) .form-label {
-    opacity: 1;
 }
 
 .form-input,
@@ -348,12 +333,12 @@ body {
 
 .select-arrow {
     position: absolute;
-    left: 4px;
+    left: 0;
     top: 50%;
     transform: translateY(-50%);
+    color: var(--color-text-secondary);
     pointer-events: none;
     transition: transform var(--transition-fast), color var(--transition-fast);
-    margin-left: var(--space-md);
 }
 
 .form-select:focus + .select-arrow {
@@ -375,7 +360,7 @@ body {
 .input-valid-icon {
     display: block;
     position: absolute;
-    left: 4px;
+    left: -8px;
     top: 50%;
     transform: translateY(-50%);
     color: var(--color-success);
@@ -573,7 +558,7 @@ body {
     align-items: center;
     justify-content: start;
     padding: var(--space-2xl) var(--space-2xl) 0 var(--space-2xl);
-    margin-top: var(--space-4xl);
+    margin-top: var(--space-3xl);
     text-align: center;
 }
 

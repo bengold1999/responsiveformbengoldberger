@@ -1,0 +1,173 @@
+/**
+ * Responsive Styles
+ * All media queries and breakpoint-specific styles
+ */
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Tablet Portrait (481px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+    .form-container {
+        --content-padding: var(--space-lg);
+        max-width: 100%;
+        padding: 0 var(--space-md);
+    }
+
+    .modal-content {
+        max-width: 100%;
+        padding: 0 var(--space-md);
+    }
+
+    .form-header {
+        padding-top: var(--space-xl);
+        padding-bottom: var(--space-lg);
+    }
+
+    .form-title {
+        font-size: 2.25rem;
+    }
+
+    .form-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .form-label {
+        font-size: var(--font-size-sm);
+    }
+
+    .form-input,
+    .form-select {
+        font-size: 1.5rem;
+    }
+
+    .form-input::placeholder {
+        font-size: 1.5rem;
+    }
+
+    .checkbox-text {
+        font-size: var(--font-size-sm);
+    }
+
+    .btn {
+        font-size: 1.5rem;
+        min-height: 60px;
+        padding: var(--space-md) var(--space-lg);
+    }
+
+    .form-actions {
+        padding-bottom: var(--space-2xl);
+        margin-top: var(--space-lg);
+    }
+
+    .contact-form {
+        gap: var(--space-lg);
+        padding: 0 var(--space-lg);
+    }
+
+    .modal-body {
+        padding: var(--space-xl) var(--space-xl) 0 var(--space-xl);
+        margin-top: var(--space-2xl);
+    }
+
+    .modal-title {
+        font-size: 2rem;
+    }
+
+    .modal-subtitle {
+        font-size: 1.25rem;
+    }
+}
+
+/* Tablet Landscape & Small Desktop (768px+) */
+@media (min-width: 768px) {
+    .form-container {
+        --content-padding: var(--space-2xl);
+        max-width: 600px;
+    }
+
+    .modal-content {
+        max-width: 600px;
+    }
+
+    .form-header {
+        padding-top: var(--space-3xl);
+        padding-bottom: var(--space-xl);
+    }
+
+    .form-title {
+        font-size: 2.75rem;
+    }
+
+    .form-subtitle {
+        font-size: 2rem;
+    }
+
+    .form-label {
+        font-size: 1rem;
+    }
+
+    .form-input,
+    .form-select {
+        font-size: 1.875rem;
+    }
+
+    .form-input::placeholder {
+        font-size: 1.875rem;
+    }
+
+    .checkbox-text {
+        font-size: 0.875rem;
+    }
+
+    .btn {
+        font-size: 1.875rem;
+        min-height: 68px;
+        padding: var(--space-lg) var(--space-xl);
+    }
+
+    .form-actions {
+        padding-bottom: var(--space-3xl);
+        margin-top: var(--space-xl);
+    }
+
+    .contact-form {
+        gap: var(--space-xl);
+    }
+}
+
+/* Large Tablet & Desktop (1024px+) */
+@media (min-width: 1024px) {
+    .form-container {
+        max-width: 700px;
+    }
+
+    .modal-content {
+        max-width: 700px;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: more) {
+    :root {
+        --color-border: #666666;
+        --color-text-secondary: #AAAAAA;
+    }
+
+    .form-input,
+    .form-select {
+        border-bottom-width: 2px;
+    }
+
+    .btn--secondary {
+        border-width: 2px;
+    }
+}

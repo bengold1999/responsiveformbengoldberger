@@ -1,0 +1,195 @@
+/**
+ * Form Styles
+ * Form fields, inputs, selects, labels, and validation states
+ */
+
+/* Error Summary */
+.error-summary {
+    background-color: rgba(255, 77, 77, 0.1);
+    border: 1px solid var(--color-error);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    margin: 0 var(--content-padding) var(--space-lg);
+}
+
+.error-summary[hidden] {
+    display: none;
+}
+
+.error-summary-title {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-error);
+    margin-bottom: var(--space-sm);
+}
+
+.error-summary-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.error-summary-list li {
+    font-size: var(--font-size-sm);
+    color: var(--color-error);
+    padding: var(--space-xs) 0;
+}
+
+.error-summary-list a {
+    color: var(--color-error);
+    text-decoration: underline;
+}
+
+.error-summary-list a:hover {
+    text-decoration: none;
+}
+
+.error-summary-list a:focus {
+    outline: 2px solid var(--color-error);
+    outline-offset: 2px;
+}
+
+/* Form Fields */
+.form-field {
+    position: relative;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.form-field-content {
+    padding: var(--space-sm) var(--space-md) var(--space-sm) 0;
+    text-align: right;
+}
+
+.form-label {
+    display: block;
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+    padding-bottom: 0;
+    line-height: 1;
+    opacity: 1;
+    transition: opacity var(--transition-fast);
+}
+
+/* Inputs */
+.form-input,
+.form-select {
+    width: 100%;
+    padding: 0;
+    font-family: inherit;
+    font-size: var(--font-size-xl);
+    color: var(--color-text);
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    transition: border-color var(--transition-fast);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-align: right;
+}
+
+.form-input::placeholder {
+    color: var(--color-text);
+    opacity: 1;
+    font-size: var(--font-size-xl);
+}
+
+.form-input:focus,
+.form-select:focus {
+    outline: none;
+}
+
+/* Field States */
+.form-field:focus-within {
+    border-bottom-color: var(--color-border-focus);
+}
+
+.form-field.has-error {
+    border-bottom-color: var(--color-border-error);
+}
+
+.form-field.is-valid {
+    border-bottom-color: var(--color-success);
+}
+
+/* Field Error Message */
+.field-error {
+    position: absolute;
+    bottom: -18px;
+    right: 0;
+    font-size: var(--font-size-xs);
+    color: var(--color-error);
+    text-align: right;
+    line-height: 1;
+}
+
+.field-error[hidden] {
+    display: none;
+}
+
+/* Select Wrapper */
+.select-wrapper {
+    position: relative;
+}
+
+.form-select {
+    padding-left: var(--space-2xl);
+    padding-right: 0;
+    cursor: pointer;
+    text-align: right;
+}
+
+.form-select.has-value {
+    color: var(--color-text);
+}
+
+.form-select option {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+.select-arrow {
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: transform var(--transition-fast), color var(--transition-fast);
+    margin-left: var(--space-md);
+}
+
+.form-select:focus + .select-arrow {
+    color: var(--color-primary);
+}
+
+.form-field.is-valid .select-arrow {
+    display: none;
+}
+
+/* Input Wrapper */
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper .form-input {
+    padding-left: var(--space-2xl);
+}
+
+/* Valid Icon */
+.input-valid-icon {
+    display: block;
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-success);
+    pointer-events: none;
+    z-index: 1;
+    width: 20px;
+    height: 15px;
+    margin-left: var(--space-md);
+}
+
+.input-valid-icon[hidden] {
+    display: none !important;
+}

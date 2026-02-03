@@ -1,0 +1,61 @@
+/**
+ * CSS Custom Properties (Design Tokens)
+ * All design system variables in one place
+ */
+
+:root {
+    /* Colors */
+    --color-bg: #000000;
+    --color-primary: #00D6D1;
+    --color-primary-hover: #00C4BF;
+    --color-text: #FFFFFF;
+    --color-text-secondary: #888888;
+    --color-text-muted: #666666;
+    --color-error: #FF4D4D;
+    --color-success: #00D6D1;
+    --color-border: #ffffff;
+    --color-border-focus: #00D6D1;
+    --color-border-error: #FF4D4D;
+
+    /* Typography */
+    --font-family: 'Assistant', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-size-xs: 0.75rem;    /* 12px */
+    --font-size-sm: 0.875rem;   /* 14px */
+    --font-size-base: 1rem;     /* 16px */
+    --font-size-lg: 1.125rem;   /* 18px */
+    --font-size-xl: 1.5rem;     /* 24px */
+    --font-size-2xl: 2rem;      /* 32px */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+
+    /* Spacing */
+    --space-xs: 0.25rem;   /* 4px */
+    --space-sm: 0.5rem;    /* 8px */
+    --space-md: 1rem;      /* 16px */
+    --space-lg: 1.5rem;    /* 24px */
+    --space-xl: 2rem;      /* 32px */
+    --space-2xl: 2.5rem;   /* 40px */
+    --space-3xl: 3rem;     /* 48px */
+    --space-4xl: 4rem;     /* 64px */
+
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-content: 10px;
+    --radius-lg: 12px;
+    --radius-full: 9999px;
+
+    /* Transitions */
+    --transition-fast: 150ms ease;
+    --transition-normal: 250ms ease;
+
+    /* Shadows */
+    --shadow-modal: 0 4px 24px rgba(0, 0, 0, 0.5);
+
+    /* Z-Index */
+    --z-header: 10;
+    --z-modal: 1000;
+}
