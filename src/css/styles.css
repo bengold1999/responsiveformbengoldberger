@@ -36,6 +36,7 @@
     --space-xl: 2rem;      /* 32px */
     --space-2xl: 2.5rem;   /* 40px */
     --space-3xl: 3rem;     /* 48px */
+    --space-4xl: 4rem;     /* 64px */
 
     /* Border Radius */
     --radius-sm: 4px;
@@ -184,6 +185,7 @@ body {
     color: var(--color-text);
     margin-top: var(--space-sm);
     text-align: right;
+    font-weight:var(--font-weight-normal);
 }
 
 .error-summary {
@@ -255,6 +257,19 @@ body {
     color: var(--color-text);
     padding-bottom: 0;
     line-height: 1;
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+}
+
+/* Show label when input has value */
+.form-field.has-value .form-label {
+    opacity: 1;
+}
+
+/* Always show label for select fields */
+.form-field--select .form-label,
+.form-field:has(.form-select) .form-label {
+    opacity: 1;
 }
 
 .form-input,
@@ -298,11 +313,13 @@ body {
 }
 
 .field-error {
-    display: block;
+    position: absolute;
+    bottom: -18px;
+    right: 0;
     font-size: var(--font-size-xs);
     color: var(--color-error);
-    margin-top: var(--space-sm);
     text-align: right;
+    line-height: 1;
 }
 
 .field-error[hidden] {
@@ -324,18 +341,27 @@ body {
     color: var(--color-text);
 }
 
+.form-select option {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
 .select-arrow {
     position: absolute;
-    left: 0;
+    left: 4px;
     top: 50%;
     transform: translateY(-50%);
-    color: var(--color-text-secondary);
     pointer-events: none;
     transition: transform var(--transition-fast), color var(--transition-fast);
+    margin-left: var(--space-md);
 }
 
 .form-select:focus + .select-arrow {
     color: var(--color-primary);
+}
+
+.form-field.is-valid .select-arrow {
+    display: none;
 }
 
 .input-wrapper {
@@ -347,16 +373,21 @@ body {
 }
 
 .input-valid-icon {
+    display: block;
     position: absolute;
-    left: 0;
+    left: 4px;
     top: 50%;
     transform: translateY(-50%);
     color: var(--color-success);
     pointer-events: none;
+    z-index: 1;
+    width: 20px;
+    height: 15px;   
+    margin-left: var(--space-md);
 }
 
 .input-valid-icon[hidden] {
-    display: none;
+    display: none !important;
 }
 
 .form-field--checkbox {
@@ -540,29 +571,30 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: var(--space-xl);
+    justify-content: start;
+    padding: var(--space-2xl) var(--space-2xl) 0 var(--space-2xl);
+    margin-top: var(--space-4xl);
     text-align: center;
 }
 
 .modal-title {
-    font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-normal);
     color: var(--color-text);
     margin-bottom: var(--space-sm);
 }
 
 .modal-subtitle {
-    font-size: var(--font-size-base);
-    color: var(--color-text-secondary);
-    margin-bottom: var(--space-xl);
+    font-size: var(--font-size-xl);
+    color: var(--color-text);
+    margin-bottom: var(--space-2xl);
 }
 
 .social-links {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--space-lg);
+    
 }
 
 .social-link {
@@ -607,7 +639,12 @@ body {
 
 @media (min-width: 768px) {
     .form-container {
-        --content-padding: var(--space-lg);
+        --content-padding: var(--space-2xl);
+        max-width: 600px;
+    }
+
+    .modal-content {
+        max-width: 600px;
     }
 
     .form-header {
@@ -615,8 +652,44 @@ body {
         padding-bottom: var(--space-xl);
     }
 
+    .form-title {
+        font-size: 2.75rem;
+    }
+
+    .form-subtitle {
+        font-size: 2rem;
+    }
+
+    .form-label {
+        font-size: 1rem;
+    }
+
+    .form-input,
+    .form-select {
+        font-size: 1.875rem;
+    }
+
+    .form-input::placeholder {
+        font-size: 1.875rem;
+    }
+
+    .checkbox-text {
+        font-size: 0.875rem;
+    }
+
+    .btn {
+        font-size: 1.875rem;
+        min-height: 68px;
+        padding: var(--space-lg) var(--space-xl);
+    }
+
     .form-actions {
         padding-bottom: var(--space-3xl);
+        margin-top: var(--space-xl);
+    }
+
+    .contact-form {
+        gap: var(--space-xl);
     }
 }
 
