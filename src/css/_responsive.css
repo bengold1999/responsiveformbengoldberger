@@ -1,9 +1,14 @@
 /**
  * Responsive Styles
  * All media queries and breakpoint-specific styles
+ * 
+ * Breakpoints:
+ * - Mobile: < 768px (base styles)
+ * - Tablet: 768px+
+ * - Desktop: 1024px+
  */
 
-/* Reduced Motion */
+/* Reduced Motion - Accessibility */
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -14,80 +19,7 @@
     }
 }
 
-/* Tablet Portrait (481px - 767px) */
-@media (min-width: 481px) and (max-width: 767px) {
-    .form-container {
-        --content-padding: var(--space-lg);
-        max-width: 100%;
-        padding: 0 var(--space-md);
-    }
-
-    .modal-content {
-        max-width: 100%;
-        padding: 0 var(--space-md);
-    }
-
-    .form-header {
-        padding-top: var(--space-xl);
-        padding-bottom: var(--space-lg);
-    }
-
-    .form-title {
-        font-size: 2.25rem;
-    }
-
-    .form-subtitle {
-        font-size: 1.5rem;
-    }
-
-    .form-label {
-        font-size: var(--font-size-sm);
-    }
-
-    .form-input,
-    .form-select {
-        font-size: 1.5rem;
-    }
-
-    .form-input::placeholder {
-        font-size: 1.5rem;
-    }
-
-    .checkbox-text {
-        font-size: var(--font-size-sm);
-    }
-
-    .btn {
-        font-size: 1.5rem;
-        min-height: 60px;
-        padding: var(--space-md) var(--space-lg);
-    }
-
-    .form-actions {
-        padding-bottom: var(--space-2xl);
-        margin-top: var(--space-lg);
-    }
-
-    .contact-form {
-        gap: var(--space-lg);
-        padding: 0 var(--space-lg);
-    }
-
-    .modal-body {
-        padding: var(--space-xl) var(--space-xl) 0 var(--space-xl);
-        margin-top: var(--space-2xl);
-    }
-
-    .modal-title {
-        font-size: 2rem;
-    }
-
-    .modal-subtitle {
-        font-size: 1.25rem;
-    }
-}
-
-/* Tablet Landscape & Small Desktop (768px+) */
+/* Tablet and Desktop (768px+) */
 @media (min-width: 768px) {
     .form-container {
         --content-padding: var(--space-2xl);
@@ -144,7 +76,7 @@
     }
 }
 
-/* Large Tablet & Desktop (1024px+) */
+/* Large Desktop (1024px+) */
 @media (min-width: 1024px) {
     .form-container {
         max-width: 700px;
@@ -153,9 +85,64 @@
     .modal-content {
         max-width: 700px;
     }
+
+    .header-bar {
+        min-height: 56px;
+    }
+
+    .form-header {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .contact-form {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 0 var(--space-2xl);
+    }
+
+    .error-summary {
+        max-width: 700px;
+        margin: 0 auto var(--space-lg);
+    }
 }
 
-/* High Contrast Mode */
+/* Extra Large Desktop (1200px+) */
+@media (min-width: 1200px) {
+    .form-container {
+        max-width: 800px;
+    }
+
+    .modal-content {
+        max-width: 800px;
+    }
+
+    .form-header {
+        max-width: 800px;
+    }
+
+    .form-title {
+        font-size: 3rem;
+    }
+
+    .form-subtitle {
+        font-size: 2.25rem;
+    }
+
+    .contact-form {
+        max-width: 800px;
+    }
+
+    .error-summary {
+        max-width: 800px;
+    }
+
+    .btn {
+        min-height: 72px;
+    }
+}
+
+/* High Contrast Mode - Accessibility */
 @media (prefers-contrast: more) {
     :root {
         --color-border: #666666;

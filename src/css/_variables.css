@@ -1,7 +1,9 @@
 /**
  * CSS Custom Properties (Design Tokens)
- * All design system variables in one place
+ * Single source of truth for all design system variables
  */
+
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;700&display=swap');
 
 :root {
     /* Colors */
@@ -39,7 +41,6 @@
     --space-xl: 2rem;      /* 32px */
     --space-2xl: 2.5rem;   /* 40px */
     --space-3xl: 3rem;     /* 48px */
-    --space-4xl: 4rem;     /* 64px */
 
     /* Border Radius */
     --radius-sm: 4px;

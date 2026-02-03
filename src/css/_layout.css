@@ -9,7 +9,7 @@
     width: 100%;
     min-height: 100vh;
     min-height: 100dvh;
-    max-width: 480px;
+    max-width: 430px;
     margin: 0 auto;
     text-align: right;
     display: flex;
@@ -84,7 +84,6 @@
     color: var(--color-text);
     margin-top: var(--space-sm);
     text-align: right;
-    font-weight: var(--font-weight-normal);
 }
 
 .contact-form {
